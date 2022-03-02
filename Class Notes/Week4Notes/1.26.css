@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    justify-items: center;
+}
+
+.nav.logo {
+    justify-self: start; 
+    width: 125px;
+}
+
+.nav_list {
+    display: flex;
+}
+
+.nav_list-items {
+    list-style-type: none;
+}
+
+.nav_list-link {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* 
+Notes: 
+
+Many web pages are based on a grid-view -> page is divided into columns 
+
+.container {
+    display: grid | inline-grid | subgrid;
+} 
+
+    grid = generates a block-level grid 
+    subgrid = if youre grid container is itself a grid item, you can use this to indicate that you want the sizes of its rows / columns to be taken from parent rather than specifying its own 
+
+
+.container {
+    grid-column-start: integer;
+    grid-column-end: integer;
+    grid-row-start: integer;
+    grid-row-end: integer;
+
+        shorthand --> grid-column: 4/6; 
+        shorthand --> grid-row: 3/6; 
+
+
+    grid-column-start: span integer; 
+    grid-column: span integer; 
+    grid-row-start: span integer;
+    grid-row-start: span integer;
+
+        shorthand --> grid-area: 1/2/4/6; 
+
+        If grid items aren't explicitly placed with grid-area, grid-column, grid-row, etc., they are automatically placed according to their order in the source code. We can override this using the order property, which is one of the advantages of grid over table-based layout. 
+        By default, all grid items have an order of 0, but this can be set to any positive or negative value, similar to z-index.
+
+        order: integer;
+
+    grid-template-columns: 12.5%;
+    grid-template-columns: 100px 3em 40%;
+    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 50px 1fr 1fr 1fr 50px;
+    grid-template-columns: 75px 3fr 2fr;
+    grid-template-columns: 50px 1fr 1fr 1fr 50px;
+
+    grid-template-rows: 20% 20% 20% 20% 20%; 
+
+        shorthand --> grid-template: 60% 25% / 200px; 
+                        grid-template: 1fr 50px / 20% 80%; 
+}
+
+.container {
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'header header header header'
+    'main main . sidebar'
+    'footer footer footer footer';
+}
+
+*/ 
+
+
+
+/* 
+GAP 
+
+.container {
+    column-gap: 2rem; 
+    row-gap: 2rem; 
+} */
+
+
+
+/* 
+JUSTIFY-ITEMS: aligns the content inside a grid item along the row axis --> applies to all grid items inside the container
+
+justify-items: start | end | center | stretch; 
+
+
+
+ALIGN-ITEMS: aligns the content inside a grid along the column acis --> this value applies to all grid items inside the container 
+
+align-items: start | end | center | stretch; 
+
+
+
+
+JUSTIFY-CONTENT: sometimes the total size of your grid may be less than the size of its grid container; this could happen if all of your grid items are sized with non-flexible units like px 
+    With this, you can set the alignment of the grid within the grid container --> aligns the grid along the row axis 
+
+justify-content: start | end | center | stretch | space-around | space-between | space-evenly; 
+
+
+
+
+ALIGN-CONTENT: sometimes the total size of your grid may be less than the size of its grid container; this could happen if all of your grid items are sized with non-flexible units like px 
+    With this, you can set the alignment of the grid within the grid container --> aligns the grid along the column axis 
+
+align-content: start | end | center | stretch | space-around | space-between | space-evenly; 
+
+
+JUSTIFY-SELF: aligns the content inside a grid item along the row acis 
+
+justify-self: start | end | center | stretch; 
+
+*/

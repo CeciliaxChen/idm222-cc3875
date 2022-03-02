@@ -1,0 +1,205 @@
+:root {
+    --color-black: #1d1d1d;
+    --color-foreground: #fafafa;
+    --max-width: 1200px; 
+    --section-padding: 100px 0;
+}
+
+
+/* Animations go here */
+
+/* Define an animation called "fadeIn" */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translate(-100vw);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+
+
+* {
+    box-sizing: border-box;
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+button {
+    color: red; 
+}
+
+button:hover {
+    color: blue; 
+
+    /* property speed function delay */
+    transition: color .15s ease-in;
+}
+
+
+.ball {
+    /* we have to make sure to justify the animation propertiy on the thing we want to animate 
+    use animation "moveRight" 
+    make it last 1 second 
+    when the animation is playing, use "ease-in" as in our speed curve,  */
+    animation: moveRight 1s ease-it; 
+    background-color: orange; 
+    border-radius: 50%;
+    height: 100px; 
+    width: 100px; 
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0); 
+    }
+
+    to {
+        transform: translateX(80vw);
+    }
+}
+
+.title {
+    /* by using forwards in the animation, 
+        the final properties of the animation (what's inside to "to {}" )
+        are going to stay after the animation completes */
+    animation: fadeIn .5s ease-in 1s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+
+    to {
+        opacity: 1; 
+    }
+}
+
+
+
+@keyframes myAnimation {
+    0% {}
+    50% {}
+    100% {}
+}
+
+.ball-2 {
+    /* whatever you don't specify, the defaults will kick in */
+    /* default timing function = linear */
+    /* default iteration count = 1 */
+    /* default direction = normal */
+    animation: animateBall 5s linear 0s infinite alternate; 
+    background-color: orange; 
+    border: 2px dotted black; 
+    border-radius: 50%; 
+    height: 100px;
+    width: 100px; 
+}
+
+
+@keyframes animateBall {
+    0% {
+        background-color: orange; 
+    }
+
+    22% {
+        background-color: red; 
+    }
+
+    31% {
+        background-color: blue; 
+    }
+
+    75% {
+        transform: scale(2);
+    }
+
+    100% {
+        opacity: 0; 
+        transform: rotate (720deg);
+    }
+}
+
+
+
+
+CSS Transitions (transitions let you gradually change one or more of CSS propoerties for an element over a specified period of time) 
+
+CSS Transition Properties 
+transition = shorthand
+transition-property = property(s) used 
+transition-duration = (milli) seconds 
+transition-timing-function = speed curve 
+    animation-timing-function: linear | ease-in-out | steps | 
+transition-delay = (milli) seconds before start 
+
+transition: [prpoerty] [duration] [timing-function] [delay];
+
+a {
+    color: blue; 
+    font-size: 100%; 
+    transition: color 2s ease-in 1s, 
+                font-size 2s ease-out 1s; 
+}
+
+a:hover {
+    color: red;
+    font-size: 120%;
+}
+
+
+/* how Mike does it... */
+
+a {
+    color: blue; 
+    border-bottom: 1px solid blue; 
+    font-soze: 12px;
+    /* put the same transition on the original selector for the transition to work in reverse */
+    /* transition: all 15s ease-in;  */
+    transition: all .15s ease-in-out; 
+
+
+}
+
+a:hover {
+    color: red; 
+    boreder-bottom: 1px solid red; 
+    font-size: 14pz; 
+    /* This is the long way to do it 
+    enables you to sprecify diffferent properties of the transition 
+    But is a little more builky to write 
+    transition: color .15s ease-in, 
+                border-bottom .15s ease-in, 
+                font-size. 15s ease=in;  */
+    
+    /* Mike usually writes it like... */
+    transition: all 15s ease-in;
+}
+
+
+
+2D Transformations 
+
+/* transform = applies transform methods 
+transform-origin = changes the default origin point  */
+
+<p>
+  <img src="image01.jpg"><img src="image01.jpg" class="image">
+</p> 
+
+
+
+Filters 
+image {
+    filter: [filtermethod(value)];
+}

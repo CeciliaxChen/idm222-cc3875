@@ -1,0 +1,374 @@
+/* media queries 
+flex box
+grid 
+responsive images 
+css animation and transitions 
+custom properties  */
+
+
+
+
+/* color scheme */
+:root {
+  --color-primary-1: #d0826f; 
+  --color-primary-2: rgb(43, 61, 112);
+  --color-primary-3: rgb(109, 144, 238);
+  --color-secondary-1: rgb(160, 185, 255);
+  --color-secondary-2: rgb(29, 47, 97);
+  --color-tertiary: rgb(109, 144, 238);
+  --color-background: #e6e6ed;
+}
+
+
+
+
+/* normalising */
+* {
+  box-sizing: border-box;
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* font */
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url('Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+}
+
+
+
+
+
+/* nav */
+.header__cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav--desktop {
+  display: none;
+}
+
+.header__nav {
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  height: auto;
+  padding: 30px 0;
+}
+
+.header__hamburger-menu {
+  color: black;
+  height: 30px;
+  margin: 0 20px;
+  max-width: 100%;
+  width: 30px;
+}
+
+.header__logo {
+  height: auto;
+  max-width: 120px;
+  padding: 10px 20px;
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+.header__nav-list-item {
+  list-style-type: none;
+}
+
+.header__nav-link {
+  color: var(--color-primary-1);
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.5rem;
+  padding: 40px;
+  text-decoration: none;
+}
+
+.homepage__title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2rem;
+  padding: 40px 70px;
+  justify-content: center;
+}
+
+.homepage__subtitle {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0 40px;
+}
+
+.homepage__img {
+  display: block;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+  margin-top: 2rem;
+  margin: .5rem auto; 
+  max-width: 95%;
+  width: 90%;
+  max-height: 400px;
+}
+
+/* gallery */
+.gallery-images {
+  height: 60vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+
+
+
+.projects__caption {
+  color: var(--color-primary-1);
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+
+
+/* kind of works */
+h2 {
+  color: #b66652;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+h3 {
+  color: rgb(43, 61, 112);
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+h4 {
+  color: rgb(109, 144, 238);
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+
+
+
+.homepage_start {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+
+
+.hello {
+  color: var(--color-primary-1);
+  font-size: 1rem, 0;
+  margin-top: 0;
+  padding: 0;
+}
+.header__list { 
+  padding: 0;
+}
+
+.logo {
+  float: left;
+  margin-left: 0;
+  max-width: 100%;
+  padding: 0; 
+  width: 100%;
+}
+
+.logo-icon__image {
+  height: 100%;
+}
+
+.logo-icon__link {
+  display: block;
+  height: 70px;
+}
+
+
+
+.navigation .menu li {
+  display: inline-block;
+  font-size: 1.25rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  transition: color .2s ease;
+}
+
+ul.menu {
+  font-size: .75rem;
+  padding: 5px .5rem 0 .5rem;
+}
+
+.navigation .menu li a {
+  color: rgb(160, 185, 255);
+  padding: .5rem;
+  text-decoration: none;
+}
+
+.navigation .menu li a:active {
+  color: rgb(29, 47, 97);
+}
+
+.navigation .max-width {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.max-width {
+  margin: auto;
+  max-width: fit-content;
+  padding: 0 1rem;
+}
+
+
+
+body {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+.introduction {
+  margin-top: 40vh;
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.full-section {
+  /* height: calc(100vh - 80px); */
+  height: 100vh;
+}
+
+
+img {
+  border-radius: .5rem;
+}
+
+img.project1 {
+  margin: 1rem, .2rem, .2rem;
+}
+
+
+.project1, .project2, .project3, .project4, .project5, .project6, .project7, .project8, .project9, .project10, .project11, .project12, .project13, .project14, .project15, .project16, .project17, .project18, .project19, .project20, .project21 {
+  display: block;
+  height: auto;
+  margin-top: 2rem;
+  margin: .5rem auto; 
+  max-width: 100%;
+  width: 80%;
+}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen, .seventeen, .eighteen, .nineteen, .twenty, .twentyone {
+  margin: .5rem;
+  padding: 0;
+}
+
+
+figcaption {
+}
+
+.about {
+  color: #d0826f;
+}
+
+.resume {
+  display: block;
+  height: auto;
+  margin-top: 6rem;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  width: 85%;
+}
+
+.resume-name { 
+  color: #d0826f;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.background, .going-deeper-part-1, .going-deeper-part-2 {
+  line-height: 1.25rem;
+  text-indent: 30px;
+}
+
+
+/*
+Resume CSS Starts HERE 
+*/
+
+
+.resume-details {
+  line-height: 1rem;
+} 
+
+
+div .details {
+  line-height: 1.5rem;
+}
+
+  
+  
+  
+  
+  
+  /* 
+  
+  mpeg 
+  H.264 
+  
+  iPhone 8 viewport = 375 x 667 
+  
+  */ 
+
+
+
+  /* @media (prefers-color-scheme: dark) {
+    --background: var(--white);
+
+--roundness: 2px;
+    border-radius: var(--roundness, 10px);
+  } */
+
+
+  @media screen and (min-width: 700px) {
+    .header__nav--desktop {
+      display: block;
+    }
+    
+    .header__mobile-nav-container {
+      display: none;
+    }
+
+    
+    
+    .homepage__title {
+      font-family: 'Nunito', sans-serif;
+      font-size: 3rem;
+      padding: 40px 70px;
+    }
+    
+    .homepage__subtitle {
+      font-family: 'Nunito', sans-serif;
+      line-height: 1.5rem;
+      padding: 0 60px;
+    }
+  }
+
